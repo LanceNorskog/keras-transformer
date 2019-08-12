@@ -351,7 +351,7 @@ def get_decoders(decoder_num,
     return last_layer
 
 
-def get_model(token_num,
+def get_inputs_outputs(token_num,
               embed_dim,
               encoder_num,
               decoder_num,
@@ -477,7 +477,7 @@ def get_model(token_num,
         trainable=trainable,
         name='Output',
     )([decoded_layer, decoder_embed_weights])
-    return keras.models.Model(inputs=[encoder_input, decoder_input], outputs=dense_layer)
+    return ([encoder_input, decoder_input], outputs=dense_layer)
 
 
 def _get_max_suffix_repeat_times(tokens, max_len):
