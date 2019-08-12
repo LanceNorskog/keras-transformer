@@ -351,7 +351,7 @@ def get_decoders(decoder_num,
     return last_layer
 
 
-def get_inputs_outputs(token_num,
+def get_model(token_num,
               embed_dim,
               encoder_num,
               decoder_num,
