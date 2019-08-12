@@ -477,7 +477,7 @@ def get_inputs_outputs(token_num,
         trainable=trainable,
         name='Output',
     )([decoded_layer, decoder_embed_weights])
-    return ([encoder_input, decoder_input], outputs=dense_layer)
+    return ([encoder_input, decoder_input], dense_layer)
 
 
 def _get_max_suffix_repeat_times(tokens, max_len):
